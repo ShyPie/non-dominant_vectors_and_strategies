@@ -15,8 +15,23 @@ namespace Non_dominated_vectors_and_strategies
             this.x = x;
             this.y = y;
         }
+        public int X
+        {
+            get
+            {
+                return x;
+            }
+        }
+
+        public int Y
+        {
+            get
+            {
+                return y;
+            }
+        }
     }
-    public class VectorSet: List<Vector>
+    public class VectorSet : List<Vector>
     {
         public VectorSet()
         {
@@ -42,6 +57,20 @@ namespace Non_dominated_vectors_and_strategies
         Vector vector;
         int rowIndex;
         int columnIndex;
+
+        public Sigma(Vector vector, int rowIndex, int columnIndex)
+        {
+            this.vector = vector;
+            this.rowIndex = rowIndex;
+            this.columnIndex = columnIndex;
+        }
+        public Vector Vector
+        {
+            get
+            {
+                return vector;
+            }
+        }
     }
 
     public class SigmaTable : List<Sigma>
