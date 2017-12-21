@@ -10,9 +10,23 @@ namespace Non_dominated_vectors_and_strategies
     {
         int x;
         int y;
+        public Vector(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
     }
     public class VectorSet: List<Vector>
     {
+        public VectorSet()
+        {
+            VectorSet vectorSet = new VectorSet();
+        }
+        public VectorSet(Vector vector)
+        {
+            VectorSet vectorSet = new VectorSet();
+            vectorSet.Add(vector);
+        }
     }
 
     public class Row : List<VectorSet>

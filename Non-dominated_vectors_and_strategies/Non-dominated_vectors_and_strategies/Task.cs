@@ -14,18 +14,60 @@ namespace Non_dominated_vectors_and_strategies
     // secondCriterionCoefficients - список коэффициентов второго критерия
     // limitationCoefficients - список коэффициентов ограничения
     {
-        int demention, limit;
+        int dimension, limit;
         List<int> firstCriterionCoefficients = new List<int>();
         List<int> secondCriterionCoefficients = new List<int>();
         List<int> limitationCoefficients = new List<int>();
 
-        public void SetData(int demention, int limit, List<int>[] inputCoefficients)
+        public void SetData(int dimension, int limit, List<int>[] inputCoefficients)
         {
-            this.demention = demention;
+            this.dimension = dimension;
             this.limit = limit;
             this.firstCriterionCoefficients = inputCoefficients[0];
             this.secondCriterionCoefficients = inputCoefficients[1];
             this.limitationCoefficients = inputCoefficients[2];
         }
+
+        #region Getters
+        public int Dimension
+        {
+            get
+            {
+                return dimension;
+            }
+        }
+
+        public int Limit
+        {
+            get
+            {
+                return limit;
+            }
+        }
+
+        public List<int> FirstCriterion
+        {
+            get
+            {
+                return firstCriterionCoefficients;
+            }
+        }
+
+        public List<int> SecondCriterion
+        {
+            get
+            {
+                return secondCriterionCoefficients;
+            }
+        }
+
+        public List<int> LimitationCoefficients
+        {
+            get
+            {
+                return limitationCoefficients;
+            }
+        }
+        #endregion Getters
     }
 }
