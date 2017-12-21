@@ -24,8 +24,8 @@ namespace Non_dominated_vectors_and_strategies
         {
             VectorsAlgorithm vectorsAlgorithm = new VectorsAlgorithm(task);
             vectorsAlgorithm.Run(ref this.vectorTable, ref this.sigmaTable, ref this.nonDominatedVectors);
-            StrategiesAlgorithm strategiesAlgorithm = new StrategiesAlgorithm();
-            nonDominatedStrategies = strategiesAlgorithm.Run(sigmaTable, nonDominatedVectors);
+            StrategiesAlgorithm strategiesAlgorithm = new StrategiesAlgorithm(task);
+            nonDominatedStrategies = strategiesAlgorithm.Run(sigmaTable,ref this.nonDominatedVectors);
 
 
         }

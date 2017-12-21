@@ -21,6 +21,10 @@ namespace Non_dominated_vectors_and_strategies
             {
                 return x;
             }
+            set
+            {
+                this.x = value;
+            }
         }
 
         public int Y
@@ -28,6 +32,10 @@ namespace Non_dominated_vectors_and_strategies
             get
             {
                 return y;
+            }
+            set
+            {
+                this.y = value;
             }
         }
     }
@@ -69,6 +77,22 @@ namespace Non_dominated_vectors_and_strategies
             get
             {
                 return vector;
+            }
+        }
+
+        public int Row
+        {
+            get
+            {
+                return rowIndex;
+            }
+        }
+
+        public int Column
+        {
+            get
+            {
+                return columnIndex;
             }
         }
     }
