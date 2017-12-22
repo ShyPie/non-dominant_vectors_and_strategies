@@ -30,5 +30,28 @@ namespace Non_dominated_vectors_and_strategies
 
         }
 
+        public List<List<int>> NonDominatedStrategies
+        {
+            get
+            {
+                return nonDominatedStrategies;
+            }
+        }
+
+        public VectorSet NonDominatedVectors
+        {
+            get
+            {
+                return nonDominatedVectors;
+            }
+        }
+
+        public SigmaTable SigmaTable
+        {
+            get
+            {
+                return sigmaTable;
+            }
+        }
     }
 }
