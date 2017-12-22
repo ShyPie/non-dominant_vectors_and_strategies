@@ -43,12 +43,17 @@ namespace Non_dominated_vectors_and_strategies
     {
         public VectorSet()
         {
-            VectorSet vectorSet = new VectorSet();
         }
         public VectorSet(Vector vector)
         {
-            VectorSet vectorSet = new VectorSet();
-            vectorSet.Add(vector);
+            Add(vector);
+        }
+        public void Set(VectorSet vectorSet)
+        {
+            Clear();
+            AddRange(vectorSet);
+              
+
         }
     }
 

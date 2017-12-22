@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Non_dominated_vectors_and_strategies
 {
-    class Solution
+    public class Solution
     //Класс хранящий решение задачи
     //vectorsTable - таблица векторов z(k,p)
     //sigmaTable - таблица допустимых векторов
