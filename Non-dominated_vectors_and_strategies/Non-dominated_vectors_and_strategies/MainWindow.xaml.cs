@@ -122,10 +122,8 @@ namespace Non_dominated_vectors_and_strategies
                         EllipseGeometry l = new EllipseGeometry(new Point(nonDominatedStrategies[i].X, nonDominatedStrategies[i].Y), 0.01, 0.01);
                         gg.Children.Add(l);
                     }
-                    
                 }
 
-               
                 if (DrawingStage == 6)
                 {
                     drw.Brush = Brushes.Transparent;
@@ -144,6 +142,29 @@ namespace Non_dominated_vectors_and_strategies
                     {
                         EllipseGeometry l = new EllipseGeometry(new Point(PermissibleVector[i].X, PermissibleVector[i].Y), 0.01, 0.01);
                         gg.Children.Add(l);
+                    }
+                }
+
+                if (DrawingStage == 7)
+                {
+                    drw.Brush = Brushes.Black;
+                    drw.Pen = new Pen(Brushes.Gray, 0.003);
+
+                    for (int i = 0; i < PermissibleVector.Count; i++)
+                    {
+                        string s = "("+Convert.ToString(PermissibleVector[i].X) +","+ Convert.ToString(PermissibleVector[i].Y)+")";
+                        FormattedText formattedText = new FormattedText(
+                        s,
+                        CultureInfo.GetCultureInfo("en-us"),
+                        FlowDirection.LeftToRight,
+                        new Typeface("Verdana"),
+                        0.8,
+                        Brushes.Black);
+                        
+                        formattedText.SetFontWeight(FontWeights.Bold);
+                        
+                        Geometry geometry = formattedText.BuildGeometry(new Point(PermissibleVector[i].X, PermissibleVector[i].Y));
+                        gg.Children.Add(geometry);
                     }
                 }
 
