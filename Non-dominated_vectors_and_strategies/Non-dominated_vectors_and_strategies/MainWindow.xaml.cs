@@ -337,7 +337,7 @@ namespace Non_dominated_vectors_and_strategies
 
                 ctrl_l_q1.Content = "Q1 = " + GetStrInputData(dimension, inputCoefficients[0]);
                 ctrl_l_q2.Content = "Q2 = " + GetStrInputData(dimension, inputCoefficients[1]);
-                ctrl_l_limit.Content = GetStrInputData(dimension, inputCoefficients[2]) + " < " + limit;
+                ctrl_l_limit.Content = GetStrInputData(dimension, inputCoefficients[2]) + " <= " + limit;
             }
             else
             {
